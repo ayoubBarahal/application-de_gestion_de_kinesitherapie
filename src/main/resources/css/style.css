@@ -1,0 +1,52 @@
+
+/*
+.title{
+    -fx-font-size: 2em;
+    -fx-text-fill: #1AAA91;
+    -fx-font-weight: bold;
+}*/
+.form_container{
+    -fx-background-color: #FFFFFF;
+}
+.form_container text{
+    -fx-font-size: 1.2em;
+    -fx-fill: #888888;
+}
+
+.form_container VBox{
+    -fx-border-width: 0 0 0 1;
+    -fx-border-color: #000000;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+
+.form_container TextField{
+    -fx-pref-width: 250;
+    -fx-pref-height: 50;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 1.2em;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA,3,0,0,3);
+}
+#passwd{
+    -fx-pref-width: 250;
+    -fx-pref-height: 50;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 1.2em;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA,3,0,0,3);
+}
+/*
+.form_container Button{
+
+    -fx-background-color: Linear-Gradient(to right, #AFFFFF,#016AAA);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA,3,0,0,3);
+    -fx-pref-width: 100;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Arial";
+    -fx-fill: #FFFFFF;
+
+}*/
+.form_container Button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #9FFFFF;
+}

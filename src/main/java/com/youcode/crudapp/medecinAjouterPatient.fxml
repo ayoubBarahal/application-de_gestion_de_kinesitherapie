@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.youcode.crudapp.medecinPatientController">
+   <children>
+      <VBox layoutX="-1.0" layoutY="214.0" prefHeight="489.0" prefWidth="224.0" style="-fx-background-color: #808080;">
+         <children>
+            <VBox prefHeight="224.0" prefWidth="217.0">
+               <children>
+                  <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Acceuil" prefHeight="63.0" prefWidth="217.0" style="-fx-background-color: #808080;" text="Acceuil" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="patient" mnemonicParsing="false" onAction="#Patient" prefHeight="56.0" prefWidth="223.0" style="-fx-background-color: #303030;" text="Patient" textFill="#fcfafa">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="actMedical" mnemonicParsing="false" onAction="#getActMedical" prefHeight="52.0" prefWidth="217.0" style="-fx-background-color: #808080;" text="Acte Médical" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="disconnect" mnemonicParsing="false" onAction="#Disconnect" prefHeight="54.0" prefWidth="217.0" style="-fx-background-color: #808080;" text="Se déconnecter" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="-3.0" layoutY="-2.0" prefHeight="216.0" prefWidth="226.0" style="-fx-background-color: #808080;">
+         <children>
+            <ImageView fitHeight="176.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@doctorlogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <TableView fx:id="tableClient" layoutX="570.0" layoutY="44.0" prefHeight="583.0" prefWidth="610.0">
+         <columns>
+            <TableColumn fx:id="CINcol" prefWidth="75.0" text="CIN" />
+            <TableColumn fx:id="Nomcol" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prenomcol" prefWidth="82.0" text="Prenom" />
+            <TableColumn fx:id="Telcol" prefWidth="83.0" text="N°Tel" />
+            <TableColumn fx:id="sexecol" prefWidth="75.0" text="sexe" />
+            <TableColumn fx:id="datecol" prefWidth="75.0" text="age" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <VBox fx:id="AjoutPatient" layoutX="263.0" layoutY="64.0" prefHeight="356.0" prefWidth="276.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="189.0" style="-fx-background-color: lightgreen;" text="Ajouter un Patient" textFill="#4b4a4d">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label text="Nom :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom" prefHeight="38.0" prefWidth="166.0" promptText="entrer un nom" />
+            <Label text="Prénom :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prenom" prefHeight="38.0" prefWidth="166.0" promptText="entrer un prénom" />
+            <Label text="CIN :">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CIN" prefHeight="38.0" prefWidth="157.0" promptText="entrer le N° de la CNI" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Tel :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="Tel" prefHeight="38.0" prefWidth="149.0" promptText="contact">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </TextField>
+            <Label text="Sexe :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboSex" prefHeight="25.0" prefWidth="281.0" />
+            <Label text="Date de Naissance :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datenaissance" prefHeight="38.0" prefWidth="281.0" promptText="date naissance" />
+            <ButtonBar prefHeight="39.0" prefWidth="276.0">
+               <buttons>
+                  <Button fx:id="modifier" mnemonicParsing="false" onAction="#getPatient" prefHeight="22.0" prefWidth="77.0" text="Modifier" textFill="#d98518">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="ajouter" layoutX="209.0" layoutY="13.0" mnemonicParsing="false" onAction="#addClient" prefHeight="22.0" prefWidth="77.0" text="Ajouter" textFill="#06c313">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+      <VBox layoutX="262.0" layoutY="480.0" prefHeight="105.0" prefWidth="276.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="174.0" style="-fx-background-color: #FF5A00; -fx-border-radius: 20px;" text="Supprimer Patient">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idPatient" prefHeight="37.0" prefWidth="222.0" promptText="CIN patient" />
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+               <buttons>
+                  <Button fx:id="supprimerPatient" mnemonicParsing="false" onAction="#deletePatient" text="Supprimer" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </buttons>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ButtonBar>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <Button fx:id="btnAjtNurse" layoutX="324.0" layoutY="627.0" mnemonicParsing="false" onAction="#addNurse" prefHeight="40.0" prefWidth="189.0" text="Ajouter un nouveau utilisateur" />
+   </children>
+</AnchorPane>

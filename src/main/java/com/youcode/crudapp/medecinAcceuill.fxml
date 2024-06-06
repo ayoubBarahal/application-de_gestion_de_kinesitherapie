@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.youcode.crudapp.medecinController">
+   <children>
+      <VBox layoutX="-1.0" layoutY="214.0" prefHeight="485.0" prefWidth="224.0" style="-fx-background-color: #808080;">
+         <children>
+            <VBox prefHeight="224.0" prefWidth="217.0">
+               <children>
+                  <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Acceuil" prefHeight="63.0" prefWidth="217.0" style="-fx-background-color: #303030;" text="Acceuil" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="patient" mnemonicParsing="false" onAction="#Patient" prefHeight="56.0" prefWidth="217.0" style="-fx-background-color: #808080;" text="Patient" textFill="#fcfafa">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="actMedical" mnemonicParsing="false" onAction="#getActMedical" prefHeight="52.0" prefWidth="217.0" style="-fx-background-color: #808080;" text="Acte Médical" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="disconnect" mnemonicParsing="false" onAction="#Disconnect" prefHeight="54.0" prefWidth="217.0" style="-fx-background-color: #808080;" text="Se déconnecter" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="215.0" prefWidth="224.0" style="-fx-background-color: #808080;">
+         <children>
+            <ImageView fitHeight="168.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@doctorlogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <TableView fx:id="tableClient" layoutX="532.0" layoutY="54.0" prefHeight="583.0" prefWidth="658.0">
+         <columns>
+            <TableColumn fx:id="CINcol" prefWidth="75.0" text="CIN" />
+            <TableColumn fx:id="Nomcol" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prenomcol" prefWidth="82.0" text="Prenom" />
+            <TableColumn fx:id="Telcol" prefWidth="83.0" text="N°Tel" />
+            <TableColumn fx:id="sexecol" prefWidth="75.0" text="sexe" />
+            <TableColumn fx:id="datecol" prefWidth="75.0" text="age" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="242.0" layoutY="55.0" prefHeight="406.0" prefWidth="270.0">
+         <children>
+            <Label fx:id="nbrRDV" layoutX="111.0" layoutY="354.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" layoutY="317.0" text="Nombre Des RDV" textFill="#06fc16">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="134.0" text="Femme" textFill="#f2065c">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="134.0" text="Homme " textFill="#120af2">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="14.0" text="Nombre Des Patients" textFill="#f50b0b">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="1.0" endY="81.0" layoutX="134.0" layoutY="191.0" startX="1.0" startY="-57.0" />
+            <Line endX="100.0" layoutX="135.0" layoutY="272.0" startX="-100.0" />
+            <Label fx:id="nbrPatient" layoutX="117.0" layoutY="60.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="pourcentageH" layoutX="50.0" layoutY="198.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="pourcentageF" layoutX="181.0" layoutY="198.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.youcode.crudapp.nurseAjoutPatient">
+   <children>
+      <VBox layoutX="-2.0" layoutY="204.0" prefHeight="512.0" prefWidth="288.0" style="-fx-background-color: #808080;">
+         <children>
+            <VBox prefHeight="255.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="Acceuil" mnemonicParsing="false" onAction="#Acceuil" prefHeight="60.0" prefWidth="285.0" style="-fx-background-color: #808080; -fx-cursor: hand;" stylesheets="@../css/style.css" text=" Acceuil" textFill="#fcf8f8">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Button>
+                  <Button fx:id="patient" mnemonicParsing="false" onAction="#Patient" prefHeight="61.0" prefWidth="292.0" style="-fx-background-color: #303030; -fx-cursor: hand;" stylesheets="@../css/style.css" text="Ajouter un Patient" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Button>
+                  <Button fx:id="addRV" mnemonicParsing="false" onAction="#RendezVousA" prefHeight="60.0" prefWidth="285.0" style="-fx-background-color: #808080; -fx-cursor: hand;" text="Gestion des rendez-vous" textAlignment="CENTER" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Button>
+                  <Button fx:id="disconnect" mnemonicParsing="false" onAction="#disconnect" prefHeight="60.0" prefWidth="285.0" style="-fx-background-color: #808080; -fx-cursor: hand;" text="Se déconnecter" textAlignment="CENTER" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="-2.0" opacity="0.95" prefHeight="205.0" prefWidth="288.0" style="-fx-background-color: #808080;">
+         <children>
+            <ImageView fitHeight="204.0" fitWidth="241.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@nurselogo.png" />
+               </image>
+            </ImageView>
+         </children></VBox>
+      <Label layoutX="752.0" layoutY="343.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <VBox layoutX="352.0" layoutY="34.0" prefHeight="395.0" prefWidth="280.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="335.0" text="Ajouter un Patient" textFill="#4b4a4d">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Nom :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom" prefHeight="38.0" prefWidth="166.0" promptText="entrer un nom" />
+            <Label text="Prénom :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prenom" prefHeight="38.0" prefWidth="166.0" promptText="entrer un prénom" />
+            <Label text="CIN :">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CIN" prefHeight="38.0" prefWidth="157.0" promptText="entrer le N° de la CNI" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Tel :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="Tel" prefHeight="38.0" prefWidth="149.0" promptText="contact">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect></TextField>
+            <Label text="Sexe :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboSex" prefHeight="25.0" prefWidth="280.0" />
+            <Label text="Date de Naissance :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datenaissance" prefHeight="38.0" prefWidth="281.0" promptText="date naissance" />
+            <ButtonBar prefHeight="82.0" prefWidth="280.0">
+              <buttons>
+                  <Button fx:id="ajouter" mnemonicParsing="false" onAction="#addClient" prefHeight="38.0" prefWidth="149.0" text="Ajouter" textFill="#06c313">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Button>
+              </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+      <TableView fx:id="tableClient" layoutX="661.0" layoutY="32.0" prefHeight="492.0" prefWidth="518.0" style="-fx-background-color: skyblue;">
+        <columns>
+          <TableColumn fx:id="CINcol" prefWidth="75.0" text="CIN" />
+          <TableColumn fx:id="Nomcol" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prenomcol" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="Telcol" prefWidth="75.0" text="Tel" />
+            <TableColumn fx:id="sexecol" prefWidth="75.0" text="sexe" />
+            <TableColumn fx:id="datecol" prefWidth="75.0" text="dateNaissance" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ImageView fitHeight="161.0" fitWidth="305.0" layoutX="334.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="232.0" fitWidth="251.0" layoutX="289.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/3959419.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
