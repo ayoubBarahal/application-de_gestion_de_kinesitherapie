@@ -40,4 +40,5 @@ Ce projet a été développé par AYOUB BARAHAL . N'hésitez pas à le modifier 
 Les contributions sous forme de pull requests sont les bienvenues. Pour des changements majeurs, veuillez ouvrir d'abord une issue pour discuter de ce que vous souhaitez changer.
 
 ## Caputure d'écran 
+![1](https://github.com/ayoubBarahal/application-de_gestion_de_kinesitherapie/assets/157633404/fde9d2c5-93b3-452f-a477-00baf30885fc)
 
