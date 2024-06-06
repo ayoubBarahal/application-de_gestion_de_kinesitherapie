@@ -33,15 +33,11 @@ Le projet est organisé en plusieurs packages et fichiers :
 
 ## Auteur
 
-Ce projet a été développé par [Votre Nom]. N'hésitez pas à le modifier et à l'utiliser selon vos besoins.
+Ce projet a été développé par AYOUB BARAHAL . N'hésitez pas à le modifier et à l'utiliser selon vos besoins.
 
 ## Contributions
 
 Les contributions sous forme de pull requests sont les bienvenues. Pour des changements majeurs, veuillez ouvrir d'abord une issue pour discuter de ce que vous souhaitez changer.
 
 ## Caputure d'écran 
-![1](https://github.com/ayoubBarahal/application-de_gestion_de_kinesitherapie/assets/157633404/bd4ecc05-076e-4055-85dc-f610b14847c0)
 
-![2](https://github.com/ayoubBarahal/application-de_gestion_de_kinesitherapie/assets/157633404/cc5f7455-1e6e-42c2-a95d-c3d352fff5d2)
-
-![3](https://github.com/ayoubBarahal/application-de_gestion_de_kinesitherapie/assets/157633404/7d06ab2a-5cdf-416f-8c5f-c27a8e074575)
